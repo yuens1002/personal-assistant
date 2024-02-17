@@ -79,7 +79,7 @@ target/
 /data/
 
 # exclude data from source control by default
-/playground/
+/playground_code/
 
 # Mac OS-specific storage files
 .DS_Store
