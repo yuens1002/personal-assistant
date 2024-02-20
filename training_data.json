@@ -1,0 +1,18 @@
+[
+  {
+    "text": "Find dining places in New York",
+    "annotations": {"entities": [[22, 30, "PLACES"]]}
+  },
+  {
+    "text": "I visited the Eiffel Tower last month",
+    "annotations": {"entities": [[14, 26, "PLACES"]]}
+  },
+  {
+    "text": "let's meet at 10am on June, 24, 2024 at Tony Romas located at 1234 main st seattle, wa 98108",
+    "annotations": {"entities": [[14, 18, "TIME"], [22, 36, "DATE"], [40, 50, "PLACES"], [62, 92, "ADDRESS"]]}
+  },
+  {
+    "text": "lunch 5pm 12/12/2023 meet at Jefferson's 8923 st. paul dr denver, co 23412",
+    "annotations": {"entities": [[6, 9, "TIME"], [10, 20, "DATE"], [29, 40, "PLACES"], [41, 74, "ADDRESS"]]}
+  }
+]

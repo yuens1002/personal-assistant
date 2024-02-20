@@ -78,8 +78,8 @@ target/
 # exclude data from source control by default
 /data/
 
-# exclude data from source control by default
-/playground_code/
+# exclude examples or pseudo code
+playground_code/
 
 # Mac OS-specific storage files
 .DS_Store
@@ -93,3 +93,9 @@ target/
 
 #google calendar credentials
 credentials.json
+
+#token related
+*.pickle
+
+#updated model
+updated_model
