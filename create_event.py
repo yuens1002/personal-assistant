@@ -29,11 +29,17 @@ def authenticate_google_calendar():
 
 
 def to_iso_time(date_time_str):
-    return datetime.strptime(date_time_str, "%m/%d/%Y %I%p").isoformat()
+    return datetime.strptime(date_time_str, "%m/%d/%Y %I:%M %p").isoformat()
 
 
 def create_event(
-    start_time_str, end_time_str, summary, description=None, location=None
+    start_time_str,
+    end_time_str,
+    summary,
+    description=None,
+    location=None,
+    attendees=None,
+    reminders=None,
 ):
     creds = authenticate_google_calendar()
     service = build("calendar", "v3", credentials=creds)
@@ -49,6 +55,11 @@ def create_event(
         "end": {
             "dateTime": to_iso_time(end_time_str),
             "timeZone": "America/New_York",
+        },
+        "attendees": attendees,
+        "reminders": {
+            "useDefault": reminders is None,
+            "overrides": reminders,
         },
     }
 
